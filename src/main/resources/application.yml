@@ -1,0 +1,26 @@
+management:
+    endpoint:
+        health:
+            show-details: when_authorized
+    endpoints:
+        web:
+            exposure:
+                include: '*'
+spring:
+    datasource:
+        driverClassName: com.mysql.cj.jdbc.Driver
+        password: 123test
+        url: jdbc:mysql://127.0.0.1:3306/hackathon2023
+        username: flow_test
+    jpa:
+        hibernate:
+            ddl-auto: update
+
+mybatis:
+    mapper-locations: mapper/*/*.xml, classpath*:mapper/*.xml, classpath:/META-INF/modeler-mybatis-mappings/*.xml
+    configuration:
+        log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    configuration-properties:
+        blobType: BLOB
+        boolValue: TRUE
+        prefix: ''
