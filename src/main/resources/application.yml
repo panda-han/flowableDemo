@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:mysql://localhost:3306/hackathon2023
+    username: flow_test
+    password: 123test
+    hikari:
+      read-only: false
+      connection-timeout: 60000
+      idle-timeout: 60000
+      validation-timeout: 3000
+      max-lifetime: 60000
+      maximum-pool-size: 60
+      minimum-idle: 10
+      auto-commit: true
+      connection-test-query: SELECT 1
+      pool-name: myHikarCp
+
+flowable:
+  database-schema-update: false
+
+  async-executor-activate: false
